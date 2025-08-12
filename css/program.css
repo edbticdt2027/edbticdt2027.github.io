@@ -1,0 +1,111 @@
+        .left-align {
+            text-align: left !important;
+        }
+
+        .main-table {
+            width: 100%;
+
+        }
+
+        .padding-20 {
+            padding: 20px !important;
+        }
+
+        .padding-60 {
+            padding: 60px !important;
+        }
+
+        .padding-15 {
+            padding: 15px !important;
+        }
+
+
+        .main-table,
+        .main-table tr,
+        .main-table td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        .color-blue {
+            background-color: #b2ccec;
+        }
+		
+		.color-purple {
+            background-color: #bf4080;
+        }
+
+        .color-beige {
+            background-color: #fde9d9;
+        }
+		
+		.color-teal {
+			background-color: #008080;
+		}
+		
+		.color-yellow {
+			background-color: #e6b800;
+		}
+
+        .color-pink {
+            background-color: #f2dbdb;
+
+        }
+
+        .color-green {
+            background-color: #d0e7cb;
+
+        }
+
+        .color-orange {
+            background-color: #fabd8a;
+
+        }
+
+        .color-oliva {
+            background-color: #ddd9c3;
+
+        }
+
+        .color-gray {
+            background-color: #d2d2d2;
+
+        }
+
+        .color-dark-pink {
+            background-color: #ffa3a3;
+        }
+
+        .main-table td {
+            padding: 5px;
+        }
+
+        .main-table tr {
+            width: 100%
+        }
+
+
+        tr.header {
+
+            color: white;
+            background-color: #c02e00;
+        }
+
+        .main-table tr td {
+            text-align: center;
+            width: 7.69%;
+        }
+
+
+        .main-table tr td.w-7 {
+            width: 7% !important;
+        }
+
+
+        .void-row,
+        .void-row td {
+            height: 0;
+            padding: 0;
+            margin: 0;
+            border: none;
+        }

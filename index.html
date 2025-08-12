@@ -1,0 +1,193 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+  <!-- add your meta tags here -->
+  <meta name="google-site-verification" content="TCxj8V6Jr5TbaWr91L3s9j1Z4evxuJ4EN6BKWJvURDI" />
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+
+  <title>EDBT/ICDT 2027 Joint Conference - 26th April - 30th April, 2027 - Lille, France</title>
+
+  <link href='css/droidserif.css' rel='stylesheet' type='text/css' />
+  <link href='css/opensans.css' rel='stylesheet' type='text/css' />
+  <link rel="icon" type="image/png" href="images/logos/favicon.png">
+  <link href="css/layout.css" rel="stylesheet" type="text/css" />
+
+  <style type="text/css">
+    .slideshow {
+      height: 400px;
+      width: 750px;
+      margin: auto
+    }
+
+    .slideshow img {
+      padding: 15px;
+      border: 1px solid #ccc;
+      background-color: #eee;
+    }
+
+
+
+
+    #return-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: rgb(0, 0, 0);
+      background: rgba(0, 0, 0, 0.7);
+      width: 50px;
+      height: 50px;
+      display: block;
+      text-decoration: none;
+      -webkit-border-radius: 35px;
+      -moz-border-radius: 35px;
+      border-radius: 35px;
+      display: none;
+      -webkit-transition: all 0.3s linear;
+      -moz-transition: all 0.3s ease;
+      -ms-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      transition: all 0.3s ease;
+      z-index: 10000;
+    }
+
+    #return-to-top i {
+      color: #fff;
+      margin: 0;
+      position: relative;
+      left: 16px;
+      top: 13px;
+      font-size: 19px;
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -ms-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      transition: all 0.3s ease;
+    }
+
+    #return-to-top:hover {
+      background: rgba(0, 0, 0, 0.9);
+    }
+
+    #return-to-top:hover i {
+      color: #fff;
+      top: 5px;
+    }
+  </style>
+
+  <!-- include jQuery library -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.5.2.min.js"></script>
+
+  <script>
+    function getUrlParameter() {
+      /*var query = window.location.search.substring(1);
+      var vars = query.split("=");
+      if (vars.length > 1) {
+          for (var i = 0; i < vars.length; i++) {
+              return vars[1];
+          }
+      }
+      return "main.html";*/
+      const searchParams = new URLSearchParams(window.location.search);
+      if (searchParams.has("contents")) {
+        return searchParams.get('contents');
+      }
+      else {
+        return "main.html"
+      }
+    }
+    $(window).scroll(function () {
+      if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
+        $('#return-to-top').fadeIn(200);    // Fade in the arrow
+      } else {
+        $('#return-to-top').fadeOut(200);   // Else fade out the arrow
+      }
+    });
+    $(document).ready(function () {
+      $('#return-to-top').click(function () {      // When arrow is clicked
+        $('body,html').animate({
+          scrollTop: 0                       // Scroll to top of body
+        }, 500);
+      });
+    });
+
+  </script>
+
+</head>
+
+<body>
+  <a id="return-to-top"><i class="icon-chevron-up"></i></a>
+
+  <div class="page_margins schatten">
+    <div id="border-top">
+      <div id="edge-tl"></div>
+      <div id="edge-tr"></div>
+    </div>
+    <div class="page">
+      <div id="header">
+        <div class="subcolumns">
+          <table
+            style="width: 100%;background-color: transparent;border-collapse: collapse;border-spacing: 0;border:0;">
+            <tbody>
+              <tr>
+                <td>
+                  <a href="https://edbticdt2027.github.io/">
+                    <img style="max-width: 220px; margin-right:20px;" src="images/logos/logo-2027.png" title="EDBT/ICDT Logo" alt="EDBT/ICDT Logo" />
+                  </a>
+                </td>
+                <td style="text-align: center">
+                  <h1 style="display:inline; color: rgb(204, 0, 0); font-size:30px">EDBT/ICDT 2027 Joint Conference</h1>
+                   <p>
+                   <h2><b>26th April - 30th April, 2027</b></h2>
+                  <h2><b>Lille, Frace</b></h2><br/>
+                </td>
+                <td>
+                  <img src="images/logos/ulille-logo.png" style="margin-left:20px; display:block;width: 210px"
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+        <div class="c25r">
+          <div class="subcr">
+            <!-- -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="main">
+      <div id="col1">
+        <div id="col1_content" class="clearfix">
+          <script>
+            $(function () { $("#col1_content").load("contents/menu.html"); });
+          </script>
+        </div>
+      </div>
+      <div id="col3">
+        <div id="col3_content" class="clearfix">
+          <script>
+            // var webcontent = "contents/main.html";
+            var webcontent = "contents/".concat(getUrlParameter());
+
+            $(function () { $("#col3_content").load(webcontent); });
+          </script>
+        </div>
+        <!-- IE Column Clearing -->
+        <div id="ie_clearing"> &#160; </div>
+
+      </div>
+    </div>
+
+    <!-- begin: #footer -->
+    <div id="border-bottom">
+      <div id="edge-bl"></div>
+      <div id="edge-br"></div>
+    </div>
+  </div>
+
+</body>
+
+</html>

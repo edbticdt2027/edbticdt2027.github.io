@@ -1,0 +1,215 @@
+
+<main-content>
+
+    <!-- include Cycle plugin -->
+    <!--<script type="text/javascript" src="https://malsup.github.com/jquery.cycle.all.js"></script>-->
+    <!--<script>
+        $(document).ready(function () {
+            $('.slideshow').cycle({
+                fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+            });
+        });
+    </script>-->
+ <h3> <b>
+       Welcome to the home of the 2027 EDBT/ICDT Joint Conference, to be held in Lille, France, on April 26 - April 30, 2027.
+</b></h3>
+<br/>
+
+    <script>
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("slideshow");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) { myIndex = 1 }
+            x[myIndex - 1].style = "display:inline-block; text-align:center;";
+            setTimeout(carousel, 5000); // Change image every 5 seconds
+        }
+    </script>
+
+    <a name="imgs_slideshow"></a>
+    <p align="center">
+        <!-- 985x407 prop -->
+        <figure class="slideshow">
+          <img  src="images/slideshow/Beffroi-CCI-Laurent-JAVOY-8-min-1920x1280.jpg" style="border: 0px solid ; margin: 0px; padding: 0px; font-size: 12.0084px; height: 400px; width: 700px;" />
+          <figcaption style="font-size:12px; color:#555;">© Beffroi CCI | Laurent Javoy - Hello Lille</figcaption>
+        </figure>
+        <figure class="slideshow">
+          <img  src="images/slideshow/Porte-Royale-Citadelle-Lille-Tourisme-7-min-1920x1440.jpg" style="border: 0px solid ; margin: 0px; padding: 0px; font-size: 12.0084px; height: 400px; width: 700px;" />
+          <figcaption style="font-size:12px; color:#555;">© Porte Royale Citadelle | Lille Tourisme</figcaption>
+        </figure>
+        <figure class="slideshow">
+          <img src="images/slideshow/Ilot-Comtesse-Lille-Tourisme-3-min-1-1920x1285.jpg" style="border: 0px solid ; margin: 0px; padding: 0px; font-size: 12.0084px; height: 400px; width: 700px;" />
+          <figcaption style="font-size:12px; color:#555;">© Ilôt Comtesse | Lille Tourisme</figcaption>
+        </figure>
+        <figure class="slideshow">
+          <img src="images/slideshow/Gaufre-Meert-Grand-Place-1200x900.jpg"style="border: 0px solid ; margin: 0px; padding: 0px; font-size: 12.0084px; height: 400px; width: 700px;" />
+          <figcaption style="font-size:12px; color:#555;">© Hello Lille</figcaption>
+        </figure>
+    </p>
+    <br />
+
+
+    <br name="conference-description" align="center" />
+    <h2>
+        EDBT: 30th International Conference on Extending Database Technology, 25th April - 30th April, 2027
+    </h2>
+    <p>
+        The EDBT series of conferences is an established and prestigious forum for the exchange of the latest research results in data management. Held in an attractive European location, the conference provides unique opportunities for database researchers, practitioners, developers, and users to explore new ideas, techniques, and tools, and to exchange experiences. The previous EDBT events were held in Venice, Vienna, Cambridge, Avignon, Valencia, Konstanz, Prague, Heraklion, Munich, Nantes, St Petersburg, Lausanne, Uppsala, Berlin, Genoa, Athens, Brussels, Bordeaux, Venice, Vienna, Lisbon, Copenhagen (virtual), Nicosia (virtual), Edinburgh (virtual), Ioannina, Paestum, and Barcelona.
+    </p>
+
+    <h2>
+        ICDT: 30th International Conference on Database Theory, 25th April - 30th April, 2027
+    </h2>
+    <p>
+        ICDT is an established and prestigious series of international conferences on research in the foundations and theory of data management. The previous ICDT events were held in Rome, Bruges, Paris, Berlin, Prague, Delphi, Jerusalem, London, Siena, Edinburgh, Barcelona, St Petersburg, Lausanne, Uppsala, Berlin, Genoa, Athens, Brussels, Bordeaux, Venice, Vienna, Lisbon, Copenhagen (virtual), Nicosia (virtual), Edinburgh (virtual), Ioannina, Paestum, and Barcelona. Since 2009, ICDT is held annually and jointly with EDBT, following the successful SIGMOD/PODS model.
+    </p>
+
+
+	<a name="sponsors"></a>
+    <br />
+    <h2>We thank our Sponsors</h2>
+
+    <!-- <table class="sponsors" border="0" cellpadding="0" cellspacing="2" style="border-bottom: 0px; width: 100%;"> -->
+        <!-- <tbody> -->
+            <!-- <tr> -->
+                <!-- <td width="100%" colspan="3"> -->
+                    <!-- <h4 style="font-weight:bold;">Gold Sponsors</h4> -->
+                <!-- </td> -->
+            <!-- </tr> -->
+
+            <!-- <tr> -->
+                <!-- <td width="100%" align="center" style="border-bottom: 0px;" colspan="1"> -->
+                    <!-- <a href="https://www.emmsystems.it/en/home-en/" target="_blank"> -->
+                        <!-- <img src="images/logos/emm.png" alt="EMM" border="0" width="300px" height="" /> -->
+                    <!-- </a> -->
+                <!-- </td>				 -->
+                <!-- <td width="100%" align="center" style="border-bottom: 0px;" colspan="1"> -->
+                    <!-- <a href="https://www.snowflake.com/en/" target="_blank"> -->
+                        <!-- <img src="images/logos/snowflake.png" alt="Snowflake" border="0" width="300px" height="" /> -->
+                    <!-- </a> -->
+                <!-- </td>	 -->
+            <!-- </tr> -->
+            <!-- <tr> -->
+                <!-- <td width="100%" align="center" colspan="3"> -->
+                    <!-- <a href="https://www.microsoft.com/" target="_blank"> -->
+                        <!-- <img src="images/logos/microsoft.svg" alt="Microsoft" border="0" width="300px" height="" /> -->
+                    <!-- </a> -->
+                <!-- </td>	 -->
+            <!-- </tr> -->
+        <!-- </tbody> -->
+    <!-- </table> -->
+    <!-- <table class="sponsors" border="0" cellpadding="0" cellspacing="2" style="border-bottom: 0px; width: 100%;"> -->
+        <!-- <tbody> -->
+            <!-- <tr> -->
+                <!-- <td width="100%" colspan="3"> -->
+                    <!-- <h4 style="font-weight:bold;">Silver Sponsors</h4> -->
+                <!-- </td> -->
+            <!-- </tr> -->
+
+            <!-- <tr> -->
+                <!-- <td width="100%" align="center" colspan="3"> -->
+                    <!-- <a href="https://www.itsvil.it" target="_blank"> -->
+                        <!-- <img src="images/logos/itsvil.png" alt="ITSvil" border="0" width="250px" height="" /> -->
+                    <!-- </a> -->
+                <!-- </td> -->
+            <!-- </tr> -->
+        <!-- </tbody> -->
+    <!-- </table> -->
+
+    <!-- <table class="sponsors" border="0" cellpadding="0" cellspacing="2" style="border-bottom: 0px; width: 100%;"> -->
+        <!-- <tbody> -->
+            <!-- <tr> -->
+                <!-- <td width="100%" colspan="6"> -->
+                    <!-- <h4 style="font-weight:bold;">Bronze Sponsors</h4> -->
+                <!-- </td> -->
+            <!-- </tr> -->
+            <!-- <tr> -->
+                <!-- <td width="100%" align="right" style="border-bottom:0px" colspan="3"> -->
+                    <!-- <a href="https://www.ikonsglobal.com/" target="_blank"> -->
+                        <!-- <img src="images/logos/IKONS.png" alt="IKONS" border="0" width="200px" height=""> -->
+                    <!-- </a> -->
+                <!-- </td> -->
+                <!-- <td width="100%" align="left" style="border-bottom:0px;" colspan="3"> -->
+                    <!-- <a href="https://www.neperiagroup.com/" target="_blank"> -->
+                        <!-- <img src="images/logos/neperia.png" alt="Neperia" border="0" width="200px" height=""> -->
+                    <!-- </a> -->
+                <!-- </td> -->
+            <!-- </tr> -->
+            <!-- <tr> -->
+                <!-- <td width="33%" align="center" style="border-bottom: 0px;" colspan="2"> -->
+                    <!-- <a href="https://www.datariver.it/" target="_blank"> -->
+                        <!-- <img src="images/logos/data_river.png" alt="Data River" border="0" width="200px" height=""> -->
+                    <!-- </a> -->
+                <!-- </td> -->
+                <!-- <td width="33%" align="center" style="border-bottom: 0px;" colspan="2"> -->
+                    <!-- <a href="http://www.ultipa.com/" target="_blank"> -->
+                        <!-- <img src="images/logos/ultipa.png" alt="Data River" border="0" width="200px" height=""> -->
+                    <!-- </a> -->
+                <!-- </td> -->
+                    <!-- <td width="33%" align="center" style="border-bottom: 0px;" colspan="2"> -->
+                        <!-- <a href="http://www.ultipa.com/" target="_blank"> -->
+                            <!-- <img src="images/logos/Maticmind.png" alt="Data River" border="0" width="200px" height=""> -->
+                        <!-- </a> -->
+                    <!-- </td> -->
+                    <!-- <td></td> -->
+            <!-- </tr> -->
+            <!-- <tr style="visibility: hidden; margin-bottom: 0px;"> -->
+                <!-- <td colspan="1"></td> -->
+                <!-- <td colspan="1"></td> -->
+                <!-- <td colspan="1"></td> -->
+                <!-- <td colspan="1"></td> -->
+                <!-- <td colspan="1"></td> -->
+                <!-- <td colspan="1"></td> -->
+            <!-- </tr> -->
+        <!-- </tbody> -->
+    <!-- </table> -->
+
+    <table class="sponsors" style="width:100%;" border="0" cellpadding="0" cellspacing="10">
+        <tbody>
+            <tr>
+                <td colspan="5" width="100%">
+                    <h4 style="font-weight:bold;">Local Supporters</h4>
+                </td>
+            </tr>
+
+            <tr>
+                <td align="center">
+                    <a href="https://www.univ-lille.fr/en/"><img src="images/logos/ulille-logo.png" alt="University of Lille" border="0" height="100px" width=""></a>
+                </td>
+                <td align="center">
+                    <a href="https://www.lille.fr/" target="_blank"><img src="images/logos/lille-city-logo.png" alt="Lille" border="0" height="100px" width=""></a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br />
+
+
+    <h2>NEWS</h2>
+    <!-- <p> <b>July, 2025</b> - The <a href="?contents=call_for_WP.html">EDBT/ICDT Call for Workshop Proposals</a> is announced. </p>
+
+    <p> <b>January, 2025</b> - The <a href="?contents=ICDT_CFP.html">ICDT 2027 Call for Papers</a> is announced. </p>
+
+  <p> <b>December, 2024</b> - The <a href="?contents=ICDT_Committee.html">ICDT 2027 Committees</a>  are announced. </p>
+
+  <p> <b>November, 2024</b> - The <a href="?contents=EDBT_Committee.html">EDBT 2027 Committees</a> are announced. </p>
+
+  <p> <b>October, 2024</b> - The <a href="?contents=call_for_IAP.html">EDBT 2027 Industrial and Application Track Call for Papers</a> is online . </p>
+
+  <p> <b>May, 2024</b> - The <a href="?contents=EDBT_CFP.html">EDBT 2027 Research Track Call for Papers</a> is online. </p> -->
+
+  <p> <b>August, 2027</b> - Launch of the EDBT/ICDT 2027 website. </p>
+        <a href="./?contents=news.html">
+            <span style="color: rgb(207, 34, 52);">
+                <b/> All news
+            </span>
+        </a>
+    </p>
+</main-content>

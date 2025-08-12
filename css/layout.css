@@ -1,0 +1,11 @@
+/* import core styles */
+@import url(base.css);
+
+/* import screen layout */
+
+@import url(nav_vlist.css);
+@import url(basemod.css);
+@import url(content.css);
+
+/* import print layout */
+@import url(print_draft.css);

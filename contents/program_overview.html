@@ -1,0 +1,598 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-7">
+    <!-- <link rel="stylesheet" href="../css/program.css"> -->
+	<!--TO BE REPLACED WITH NEXT LINE BEFORE COMMIT-->
+	<link rel="stylesheet" href="css/program.css">
+    <script>
+        var clockID;
+        var yourTimeZoneFrom = +3.00; //time zone value where you are at
+    
+        var d = new Date();
+        //get the timezone offset from local time in minutes
+        var tzDifference = yourTimeZoneFrom * 60 + d.getTimezoneOffset();
+        //convert the offset to milliseconds, add to targetTime, and make a new Date
+        var offset = tzDifference * 60 * 1000;
+    
+        function UpdateClock() {
+          var tDate = new Date(new Date().getTime() + offset);
+          var in_hours = tDate.getHours()
+          var in_minutes = tDate.getMinutes();
+          var in_seconds = tDate.getSeconds();
+    
+          if (in_minutes < 10)
+            in_minutes = '0' + in_minutes;
+          if (in_seconds < 10)
+            in_seconds = '0' + in_seconds;
+          if (in_hours < 10)
+            in_hours = '0' + in_hours;
+    
+          document.getElementById('theTime').innerHTML = ""
+            + in_hours + ":"
+            + in_minutes + ":"
+            + in_seconds;
+    
+        }
+        function StartClock() {
+          clockID = setInterval(UpdateClock, 500);
+        }
+    
+        function KillClock() {
+          clearTimeout(clockID);
+        }
+        window.onload = function () {
+          StartClock();
+        }
+        $(document).ready(function(){
+            $("td[class*='color-']").each(function(i,el){
+                $(el).attr("ref",""+i);
+            });
+            $("td[ref]").click(function(el){
+                var ref=$(el.currentTarget).attr("ref");
+                window.location.href = "?contents=detailed_program.html&show="+ref;
+            });
+           
+        });
+      </script>
+      <style>
+        td[ref]{
+            cursor:pointer;
+        }
+      </style>
+</head>
+
+<body class="vsc-initialized" data-new-gr-c-s-check-loaded="14.1155.0" data-gr-ext-installed="" br-mode="off" saccades-color="" fixation-strength="2" saccades-interval="0" style="--fixation-edge-opacity: 80%; --br-line-height: 1; --br-boldness: 600;">
+    <h2 style="font-weight: bold; color: rgb(204, 0, 0);">Program Overview</h2>
+    <p> Times are displayed in Tampere local time (UTC+3).</p>
+    <!--<p>Papers for which the presentations are going to be delivered online by remote speakers are shown in <span style="color:blue;">blue color</span></p>-->
+
+    <h5>Current time in UTC+3: <span id="theTime"></span></h5><br>
+
+    <table class="main-table">
+        <tbody>
+            <tr class="void-row">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            
+			
+            <tr class="header">
+                <td colspan="13" ref="tabd1"><b>Day 1: Tuesday, March 24, 2026</b></td>
+            </tr>
+            <tr>
+                <td>
+                    8:00-8:40
+                </td>
+                <td class="color-pink" colspan="12">
+                    <b>Conference registration</b>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    8:40-9:00
+                </td>
+
+                <td class="color-pink" colspan="12">
+                    <b>ICDT Opening</b><br />
+                </td>
+			</tr>
+			<tr>
+				<td>
+                    9:00-10:00
+                </td>
+				<td class="color-orange" colspan="2">
+                    <b>EDBT/ICDT Keynote</b><br />
+                </td>
+                <td class="color-green" colspan="2" rowspan="2">
+                    <b>DOLAP</b><br />
+                </td>
+                <td class="color-purple" colspan="2" rowspan="2">
+                    <b>Workshop 2</b><br />
+                </td>
+                <td class="color-yellow" colspan="2" rowspan="2">
+                    <b>Workshop 3</b><br />
+                </td>
+                <td class="color-dark-pink" colspan="2" rowspan="2">
+                    <b>Workshop 4</b><br />
+                </td>
+				<td colspan="2" rowspan="2"></td>
+            </tr>
+			<tr>
+				<td>
+                    10:00-10:30
+                </td>
+				<td class="color-orange" colspan="2">
+                    <b>ICDT Test of Time Award</b><br />
+                </td>
+			</tr>
+            <tr>
+                <td>
+
+                </td>
+                <td colspan="12">
+                    <b>Coffee Break</b>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    11:00-12:30
+                </td>
+                <td class="color-blue" colspan="2">
+                    <b>ICDT Session 1</b>
+                </td>
+                <td class="color-green" colspan="2">
+                    <b>DOLAP</b><br />
+                </td>
+                <td class="color-purple" colspan="2">
+                    <b>Workshop 2</b><br />
+                </td>
+                <td class="color-yellow" colspan="2">
+                    <b>Workshop 3</b><br />
+                </td>
+                <td class="color-dark-pink" colspan="2">
+                    <b>Workshop 4</b><br />
+                </td>
+				<td class="color-teal" colspan="1">
+                    <b>PhD Workshop</b><br />
+                </td>
+				<td class="color-beige" colspan="1">
+                    <b>Industrial Event</b><br />
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+
+                </td>
+                <td colspan="12" class="padding-20">
+                    <b>Lunch Break</b>
+                </td>
+            <tr>
+                <td>
+                    14:00-15:30
+                </td>
+                <td class="color-blue" colspan="2">
+                    <b>ICDT Invited Lecture & Session 2</b>
+                </td>
+                <td class="color-green" colspan="2">
+                    <b>DOLAP</b><br />
+                </td>
+                <td class="color-purple" colspan="2">
+                    <b>Workshop 2</b><br />
+                </td>
+                <td class="color-yellow" colspan="2">
+                    <b>Workshop 3</b><br />
+                </td>
+                <td class="color-dark-pink" colspan="2">
+                    <b>Workshop 4</b><br />
+                </td>
+				<td class="color-teal" colspan="1">
+                    <b>PhD Workshop</b><br />
+                </td>
+				<td class="color-beige" colspan="1">
+                    <b>Industrial Event</b><br />
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+
+                </td>
+                <td colspan="12">
+                    <b>Coffee Break</b>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    16:00-17:30
+                </td>
+                <td class="color-blue" colspan="2">
+                    <b>ICDT Session 3</b>
+                </td>
+                <td class="color-green" colspan="2">
+                    <b>DOLAP</b><br />
+                </td>
+                <td class="color-purple" colspan="2">
+                    <b>Workshop 2</b><br />
+                </td>
+                <td class="color-yellow" colspan="2">
+                    <b>Workshop 3</b><br />
+                </td>
+                <td class="color-dark-pink" colspan="2">
+                    <b>Workshop 4</b><br />
+                </td>
+				<td class="color-teal" colspan="1">
+                    <b>PhD Workshop</b><br />
+                </td>
+				<td class="color-beige" colspan="1">
+                    <b>Industrial Event</b><br />
+                </td>
+
+            </tr>
+                <td class="padding-15"></td>
+            </tr>
+			
+			<tr>
+                <td>
+                    18:00-19:00
+                </td>
+                <td class="color-pink" colspan="13">
+                    <b>Guided Walking Tour</b>
+                </td>
+            </tr>
+			<tr>
+                <td>
+                    19:00-21:00
+                </td>
+                <td class="color-pink" colspan="13">
+                    <b>Welcome Reception at the Old City Hall</b>
+                </td>
+            </tr>
+			
+			
+			
+			
+			<tr class="header">
+                <td colspan="15" ref="tabd2"><b>Day 2: Wednesday, March 25, 2026</b></td>
+            </tr>
+            <tr>
+                <td>
+                    8:00-8:40
+                </td>
+                <td class="color-pink" colspan="13">
+                    <b>Conference registration</b>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    8:40-9:00
+                </td>
+
+                <td class="color-pink" colspan="13">
+                    <b>EDBT Opening</b><br />
+                </td>
+			</tr>
+			<tr>
+                <td>
+                    9:00-10:00
+                </td>
+
+                <td class="color-orange" colspan="13">
+                    <b>EDBT/ICDT Keynote</b><br />
+                </td>
+			</tr>
+			<tr>
+				<td>
+                    10:00-10:30
+                </td>
+				<td class="color-orange" colspan="13">
+                    <b>EDBT Test of Time Award</b><br />
+                </td>
+			</tr>
+            <tr>
+                <td>
+
+                </td>
+                <td colspan="13">
+                    <b>Coffee Break</b>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    11:00-12:30
+                </td>
+                <td class="color-blue" colspan="2">
+                    <b>ICDT Session 4</b>
+                </td>
+                <td class="color-green" colspan="2">
+                    <b>EDBT Session 1</b><br />
+                </td>
+                <td class="color-yellow" colspan="2">
+                    <b>EDBT Session 2</b><br />
+                </td>
+                <td class="color-teal" colspan="2">
+                    <b>EDBT Session 3</b><br />
+                </td>
+                <td class="color-gray" colspan="2">
+                    <b>Tutorial 1</b><br />
+                </td>
+            </tr>
+            <tr>
+                <td>
+
+                </td>
+                <td colspan="13" class="padding-20">
+                    <b>Lunch Break</b>
+                </td>
+            <tr>
+                <td>
+                    14:00-15:30
+                </td>
+                <td class="color-blue" colspan="2">
+                    <b>ICDT Session 5</b>
+                </td>
+                <td class="color-green" colspan="2">
+                    <b>EDBT Session 4</b><br />
+                </td>
+                <td class="color-yellow" colspan="2">
+                    <b>EDBT Session 5</b><br />
+                </td>
+                <td class="color-teal" colspan="2">
+                    <b>EDBT Session 6</b><br />
+                </td>
+                <td class="color-gray" colspan="2">
+                    <b>Tutorial 2</b><br />
+                </td>
+            </tr>
+            <tr>
+                <td>
+
+                </td>
+                <td colspan="13">
+                    <b>Coffee Break</b>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    16:00-17:30
+                </td>
+                <td class="color-blue" colspan="2">
+                    <b>ICDT Session 6</b>
+                </td>
+                <td class="color-dark-pink" colspan="6">
+                    <b>EDBT Demo Session</b><br />
+                </td>
+                <td class="color-gray" colspan="2">
+                    <b>DEI Tutorial</b><br />
+                </td>
+            </tr>
+			
+			
+			
+			
+			
+			<tr class="header">
+                <td colspan="15" ref="tabd3"><b>Day 3: Thursday, March 26, 2026</b></td>
+            </tr>
+			<tr>
+                <td>
+                    9:00-10:00
+                </td>
+
+                <td class="color-orange" colspan="13">
+                    <b>EDBT/ICDT Keynote</b><br />
+                </td>
+			</tr>
+			<tr>
+				<td>
+                    10:00-10:30
+                </td>
+				<td class="color-orange" colspan="13">
+                    <b>EDBT & ICDT Best Paper Awards</b><br />
+                </td>
+			</tr>
+            <tr>
+                <td>
+
+                </td>
+                <td colspan="13">
+                    <b>Coffee Break</b>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    11:00-12:30
+                </td>
+                <td class="color-blue" colspan="2">
+                    <b>ICDT Session 7</b>
+                </td>
+                <td class="color-green" colspan="2">
+                    <b>EDBT Session 7</b><br />
+                </td>
+                <td class="color-yellow" colspan="2">
+                    <b>EDBT Session 8</b><br />
+                </td>
+                <td class="color-dark-pink" colspan="2">
+                    <b>EDBT Industrial 1</b><br />
+                </td>
+                <td class="color-gray" colspan="2">
+                    <b>Tutorial 3</b><br />
+                </td>
+            </tr>
+            <tr>
+                <td>
+
+                </td>
+                <td colspan="13" class="padding-20">
+                    <b>Lunch Break</b>
+                </td>
+            <tr>
+                <td>
+                    14:00-15:00
+                </td>
+                <td class="color-dark-pink" colspan="13">
+                    <b>Sponsors Talks</b><br />
+                </td>
+            </tr>
+            <tr>
+                <td>
+
+                </td>
+                <td colspan="13">
+                    <b>Coffee Break</b>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    16:00-16:30
+                </td>
+                <td class="color-orange" colspan="13">
+                    <b>DEI Keynote</b><br />
+                </td>
+            </tr>
+			<tr>
+                <td>
+                    16:30-17:30
+                </td>
+                <td class="color-orange" colspan="13">
+                    <b>DEI Panel</b><br />
+                </td>
+            </tr>
+			
+			</tr>
+                <td class="padding-15"></td>
+            </tr>
+			
+			<tr>
+                <td>
+                    20:00-23:30
+                </td>
+                <td class="color-pink" colspan="13">
+                    <b>Social Dinner</b> [Solo Sokos Hotel Torni]
+                </td>
+            </tr>
+			
+			
+			
+			<tr class="header">
+                <td colspan="15" ref="tabd4"><b>Day 4: Friday, March 27, 2026</b></td>
+            </tr>
+			<tr>
+                <td>
+                    9:00-10:00
+                </td>
+
+                <td class="color-orange" colspan="13">
+                    <b>EDBT/ICDT Keynote</b><br />
+                </td>
+			</tr>
+			<tr>
+				<td>
+                    10:00-10:30
+                </td>
+				<td class="color-orange" colspan="13">
+                    <b>EDBT/ICDT 2027 Announcement</b><br />
+                </td>
+			</tr>
+			<tr>
+                <td>
+
+                </td>
+                <td colspan="13">
+                    <b>Coffee Break</b>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    11:00-12:30
+                </td>
+                <td class="color-green" colspan="2">
+                    <b>EDBT Session 9</b><br />
+                </td>
+                <td class="color-yellow" colspan="2">
+                    <b>EDBT Session 10</b><br />
+                </td>
+                <td class="color-teal" colspan="2">
+                    <b>EDBT Session 11</b><br />
+                </td>
+				<td class="color-dark-pink" colspan="2">
+                    <b>EDBT Industrial 2</b><br />
+                </td>
+                <td class="color-gray" colspan="2">
+                    <b>Tutorial 4</b><br />
+                </td>
+            </tr>
+            <tr>
+                <td>
+
+                </td>
+                <td colspan="13" class="padding-20">
+                    <b>Lunch Break</b>
+                </td>
+			</tr>	
+            <tr>
+				<td>
+                    14:00-15:30
+                </td>
+                <td class="color-green" colspan="2">
+                    <b>EDBT Session 12</b><br />
+                </td>
+                <td class="color-yellow" colspan="2">
+                    <b>EDBT Session 13</b><br />
+                </td>
+                <td class="color-teal" colspan="2">
+                    <b>EDBT Session 14</b><br />
+                </td>
+				<td colspan="2">
+                </td>
+                <td class="color-gray" colspan="2">
+                    <b>Tutorial 5</b><br />
+                </td>
+			</tr>
+            
+            
+        </tbody>
+    </table>
+<br/>
+
+
+</body>
+<div style="position: absolute; bottom: 0px; left: 0px; height: 0px; z-index: 5;"><template shadowrootmode="open">
+        <div id="plasmo-mount-container" style="display: flex; position: relative; top: 0px; left: 0px;"></div>
+    </template></div>
+<grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open">
+        <style>
+            div.grammarly-desktop-integration {
+                position: absolute;
+                width: 1px;
+                height: 1px;
+                padding: 0;
+                margin: -1px;
+                overflow: hidden;
+                clip: rect(0, 0, 0, 0);
+                white-space: nowrap;
+                border: 0;
+                -moz-user-select: none;
+                -webkit-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
+
+            div.grammarly-desktop-integration:before {
+                content: attr(data-content);
+            }
+        </style>
+        <div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div>
+    </template></grammarly-desktop-integration></html>
